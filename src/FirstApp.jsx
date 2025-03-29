@@ -1,16 +1,13 @@
-const newMessage ={
-    message: 'hola mundo',
-    title:'Fede'
-
-};
-
-export const FirstApp = () => {
+import PropTypes from 'prop-types'
+export const FirstApp = ({title}) => {
   return (
     <>
-        <h1>{newMessage.title}</h1>
+        <h1>{title}</h1>
         <p>el fede</p>
     </>
   )
 }
 
-export default FirstApp
+FirstApp.PropTypes = {
+  title:PropTypes.string
+}
