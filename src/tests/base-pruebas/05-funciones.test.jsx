@@ -2,7 +2,7 @@ import {describe, test, expect} from '@jest/globals'
 import { getUser, getUsuarioActivo } from '../../base-pruebas/05-funciones'
 
 describe('05-funciones',()=>{
-    test('should return a object',()=>{
+    test('should return a valid object',()=>{
         const testUsers = {
             uid: 'ABC123',
             username: 'El_Papi1502'
@@ -12,11 +12,10 @@ describe('05-funciones',()=>{
     });
 
     test('should return a valid object',()=>{
-        const testUser ={
-            uid: 'ABC567',
-            username: 'fede'
-        }
-        const user = getUsuarioActivo()
-        expect(testUser).toEqual(user)
+
+        const name = 'fede';
+        const user = getUsuarioActivo(name)
+        expect(user).toEqual({    uid: 'ABC567',
+            username: name})
     })
 })

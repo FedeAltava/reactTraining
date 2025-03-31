@@ -8,9 +8,9 @@ export const getUser = () => ({
 
 
 // Tarea
-export const getUsuarioActivo = () =>({
+export const getUsuarioActivo = (nombre) =>({
     uid: 'ABC567',
-    username: 'fede'
+    username: nombre
 })
 
 
