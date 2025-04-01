@@ -1,14 +1,24 @@
+
 import PropTypes from 'prop-types'
-export const FirstApp = ({title, subTitle}) => {
+export const FirstApp = ({title, subtitle, name}) => {
   return (
     <>
         <h1>{title}</h1>
-        <p>{subTitle}</p>
+        <h2>{name}</h2>
+        <h3>{subtitle}</h3>
+        
     </>
   )
 }
 
-FirstApp.PropTypes = {
+FirstApp.ropTypes = {
   title:PropTypes.string.isRequired,
-  subTitle:PropTypes.string.isRequired
+  subtitle:PropTypes.string.isRequired,
+  name:PropTypes.string,
+}
+
+FirstApp.defaultProps = {
+  name: 'Fede Altava',
+  subtitle: 'No hay subtitulo',
+  title: 'no hay titulo',
 }

@@ -3,15 +3,15 @@ import React from "react";
 import { useState } from "react";
 
 export const CounterApp = ({ value }) => {
-    const [counter, setCounter] = useState(value)
+    const [valor, setValor] = useState(value)
     const handleClick = () => {
-        setCounter(( prev ) => prev + 1);
+    setValor((prev)=>prev+1);
   };
 
   return (
     <>
       <h1>CounterApp</h1>
-      <h2> {counter} </h2>
+      <h2> {valor} </h2>
       <button onClick={() => handleClick()}>+1</button>
     </>
   );
