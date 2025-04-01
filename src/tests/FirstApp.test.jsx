@@ -21,4 +21,12 @@ describe('FirstApp', ()=>{
         expect(h1.innerHTML).toContain(title);
 
     });
+
+    test('should show the subtitle by props',()=>{
+        const title = 'fede';
+        const subtitle = 'yooooo';
+        const {getAllByText} = render(<FirstApp title={title} subtitle={subtitle} />);
+        expect(getAllByText(subtitle)).toBeTruthy();
+
+    });
 });

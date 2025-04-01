@@ -6,6 +6,7 @@ export const FirstApp = ({title, subtitle, name}) => {
         <h1>{title}</h1>
         <h2>{name}</h2>
         <h3>{subtitle}</h3>
+        
     </>
   )
 }
